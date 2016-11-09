@@ -120,6 +120,7 @@
 		043438AA1DC9DF33002516BB /* YYTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 043438571DC9DF33002516BB /* YYTransaction.m */; };
 		043438AB1DC9DF33002516BB /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 043438591DC9DF33002516BB /* YYWeakProxy.m */; };
 		043438AF1DC9E0E0002516BB /* IMTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 043438AE1DC9E0E0002516BB /* IMTabbar.m */; };
+		0463E3C81DD2EA5800108418 /* GroupMemberControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463E3C71DD2EA5800108418 /* GroupMemberControlle.m */; };
 		046403961DCB193B002A229C /* EmojisImageTextList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046403951DCB193B002A229C /* EmojisImageTextList.plist */; };
 		046404041DCB198D002A229C /* mq_emoji_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 046403E01DCB198D002A229C /* mq_emoji_1.png */; };
 		046404051DCB198D002A229C /* mq_emoji_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 046403E11DCB198D002A229C /* mq_emoji_10.png */; };
@@ -446,6 +447,8 @@
 		0434385A1DC9DF33002516BB /* YYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKit.h; sourceTree = "<group>"; };
 		043438AD1DC9E0E0002516BB /* IMTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTabbar.h; sourceTree = "<group>"; };
 		043438AE1DC9E0E0002516BB /* IMTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTabbar.m; sourceTree = "<group>"; };
+		0463E3C61DD2EA5800108418 /* GroupMemberControlle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupMemberControlle.h; sourceTree = "<group>"; };
+		0463E3C71DD2EA5800108418 /* GroupMemberControlle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupMemberControlle.m; sourceTree = "<group>"; };
 		046403951DCB193B002A229C /* EmojisImageTextList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EmojisImageTextList.plist; sourceTree = "<group>"; };
 		046403E01DCB198D002A229C /* mq_emoji_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mq_emoji_1.png; sourceTree = "<group>"; };
 		046403E11DCB198D002A229C /* mq_emoji_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mq_emoji_10.png; sourceTree = "<group>"; };
@@ -730,6 +733,8 @@
 		0434378F1DC9DDF0002516BB /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				0463E3C61DD2EA5800108418 /* GroupMemberControlle.h */,
+				0463E3C71DD2EA5800108418 /* GroupMemberControlle.m */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -1457,6 +1462,7 @@
 				0434386C1DC9DF33002516BB /* UIBarButtonItem+YYAdd.m in Sources */,
 				043437881DC9DCE3002516BB /* NSMutableDictionary+Addition.m in Sources */,
 				0434387E1DC9DF33002516BB /* CALayer+YYWebImage.m in Sources */,
+				0463E3C81DD2EA5800108418 /* GroupMemberControlle.m in Sources */,
 				043438A71DC9DF33002516BB /* YYThreadSafeArray.m in Sources */,
 				043438781DC9DF33002516BB /* UIView+YYAdd.m in Sources */,
 				043438611DC9DF33002516BB /* NSNotificationCenter+YYAdd.m in Sources */,

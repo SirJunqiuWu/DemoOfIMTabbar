@@ -98,6 +98,12 @@
 - (BOOL)didDeleteCharacterFromLocation:(NSUInteger)location;
 
 
+/**
+ 当前选中的是系统键盘上的@字符
+ */
+- (void)didSelectAtCharacter;
+
+
 #pragma mark - 功能按钮视图操作
 /**
  IMMoreView上当前点击的功能按钮

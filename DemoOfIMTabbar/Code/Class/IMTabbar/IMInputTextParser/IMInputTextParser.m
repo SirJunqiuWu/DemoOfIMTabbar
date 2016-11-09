@@ -69,9 +69,11 @@ OSSpinLockUnlock(&_lock);
         
         NSCharacterSet *charset = [NSCharacterSet characterSetWithCharactersInString:@"$^?+*.,#|{}[]()\\"];
         // escape regex characters
-        for (NSUInteger ci = 0, cmax = str.length; ci < cmax; ci++) {
+        for (NSUInteger ci = 0, cmax = str.length; ci < cmax; ci++)
+        {
             unichar c = [str characterAtIndex:ci];
-            if ([charset characterIsMember:c]) {
+            if ([charset characterIsMember:c])
+            {
                 [str insertString:@"\\" atIndex:ci];
                 ci++;
                 cmax++;
@@ -168,11 +170,14 @@ OSSpinLockUnlock(&_lock);
     {
         NSRange selectedRange = range ? *range : NSMakeRange(0, 0);
         NSUInteger cutLength = 0;
-        for (NSUInteger i = 0, max = matches.count; i < max; i++) {
+        for (NSUInteger i = 0, max = matches.count; i < max; i++)
+        {
             NSTextCheckingResult *one = matches[i];
             NSRange oneRange = one.range;
             if (oneRange.length == 0) continue;
             oneRange.location -= cutLength;
+            
+            //在此处匹配到图片
             NSString *subStr = [text.string substringWithRange:oneRange];
             UIImage *emoticon = mapper[subStr];
             if (!emoticon) continue;
@@ -180,6 +185,7 @@ OSSpinLockUnlock(&_lock);
             CGFloat fontSize = 12; // CoreText default value
             CTFontRef font = (__bridge CTFontRef)([text attribute:NSFontAttributeName atIndex:oneRange.location]);
             if (font) fontSize = CTFontGetSize(font);
+            
             NSMutableAttributedString *atr = [NSAttributedString attachmentStringWithEmojiImage:emoticon fontSize:fontSize];
             [atr setTextBackedString:[YYTextBackedString stringWithString:subStr] range:NSMakeRange(0, atr.length)];
             [text replaceCharactersInRange:oneRange withString:atr.string];

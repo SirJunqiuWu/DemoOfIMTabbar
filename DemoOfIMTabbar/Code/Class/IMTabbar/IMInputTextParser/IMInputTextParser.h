@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 文本解析类(YYTextView需要用到,其关键在匹配到自定义key-vaule的图片)
+ */
 @interface IMInputTextParser : NSObject<YYTextParser>
 
+/**
+ 正则表达式匹配unicode字符
+ */
 @property (nonatomic, strong) NSRegularExpression *regexImageBinding;
 @property (copy) NSDictionary *emoticonMapper;
 @property (nonatomic, strong) id attachmentTarget;

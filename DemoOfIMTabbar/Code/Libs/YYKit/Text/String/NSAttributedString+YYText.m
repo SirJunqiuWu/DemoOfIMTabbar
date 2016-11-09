@@ -593,9 +593,12 @@ return style. _attr_;
     if (!image || fontSize <= 0) return nil;
     
     BOOL hasAnim = NO;
-    if (image.images.count > 1) {
+    if (image.images.count > 1)
+    {
         hasAnim = YES;
-    } else if ([image conformsToProtocol:@protocol(YYAnimatedImage)]) {
+    }
+    else if ([image conformsToProtocol:@protocol(YYAnimatedImage)])
+    {
         id <YYAnimatedImage> ani = (id)image;
         if (ani.animatedImageFrameCount > 1) hasAnim = YES;
     }
@@ -612,13 +615,16 @@ return style. _attr_;
     YYTextAttachment *attachment = [YYTextAttachment new];
     attachment.contentMode = UIViewContentModeScaleAspectFit;
     attachment.contentInsets = UIEdgeInsetsMake(ascent - (bounding.size.height + bounding.origin.y), bounding.origin.x, descent + bounding.origin.y, bounding.origin.x);
-    if (hasAnim) {
+    if (hasAnim)
+    {
         YYAnimatedImageView *view = [YYAnimatedImageView new];
         view.frame = bounding;
         view.image = image;
         view.contentMode = UIViewContentModeScaleAspectFit;
         attachment.content = view;
-    } else {
+    }
+    else
+    {
         attachment.content = image;
     }
     

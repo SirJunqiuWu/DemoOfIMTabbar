@@ -1,4 +1,5 @@
 platform :ios,'7.0'
 target 'DemoOfIMTabbar' do
 pod 'SDWebImage', '~> 3.8.1'
+pod 'Masonry','~> 1.0.1'
 end

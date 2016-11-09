@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "GroupMemberControlle.h"
 #import "IMTabbar.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,IMTabbarDelegate>
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate,IMTabbarDelegate,GroupMemberControlleDelegate>
 {
     UITableView *infoTable;
     IMTabbar    *myTabber;
@@ -131,6 +132,13 @@
     return NO;
 }
 
+- (void)didSelectAtCharacter {
+    NSLog(@"当前输入@字符");
+    GroupMemberControlle *vc = [[GroupMemberControlle alloc]init];
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)moreViewFunctionBtnPressedWithTitle:(NSString *)title {
     if ([title isEqualToString:@"拍摄照片"])
     {
@@ -145,6 +153,13 @@
         
     }
     NSLog(@"click %@",title);
+}
+
+#pragma mark - GroupMemberControlleDelegate
+
+- (void)selectedUserWithUserName:(NSString *)userName {
+    NSString *string = [NSString stringWithFormat:@"@%@",userName];
+    [myTabber.inputTextView insertText:string];
 }
 
 #pragma mark - 自定义方法

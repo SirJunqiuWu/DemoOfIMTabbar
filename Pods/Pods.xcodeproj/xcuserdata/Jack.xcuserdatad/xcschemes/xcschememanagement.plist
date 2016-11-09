@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-DemoOfIMTabbar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4F8E426B3D05EF5298EBC9145D4ABCEC</key>
+		<key>25CE47B09BB8D4A222DB5DDE543FEC4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C56E5372C730B8CD56582D33365E9CFB</key>
+		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB63B02B6F7F5BDF01554E643E804705</key>
 		<dict>
 			<key>primary</key>
 			<true/>

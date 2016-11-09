@@ -420,12 +420,17 @@ static CGFloat   const InputViewMaxHeight = 150.0;
     }
     else if ([text isEqualToString:@"@"])
     {
+        if (_delegate && [_delegate respondsToSelector:@selector(didSelectAtCharacter)])
+        {
+            [_delegate didSelectAtCharacter];
+        }
         return NO;
     }
     else if ([text length]==0)
     {
         if (range.length == 1 &&[_delegate respondsToSelector:@selector(didDeleteCharacterFromLocation:)])
         {
+            //输入特殊字符 键盘上的x
             return ![_delegate didDeleteCharacterFromLocation:range.location];
         }
     }

@@ -16,6 +16,7 @@
 #ifdef __OBJC__
        #import "AdditionFrameworks.h"
        #import <UIImageView+WebCache.h>
+       #import <Masonry/Masonry.h>
        #import "YYKit.h"
        #import "AppConfig.h"
 #endif

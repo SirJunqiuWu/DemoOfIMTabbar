@@ -59,7 +59,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) CGFloat descent;
 
 /**
- The typographic width of glyphs in the run.
+ The typographic width of glyphs in the run. 符号的排版宽度
  */
 @property (nonatomic) CGFloat width;
 
