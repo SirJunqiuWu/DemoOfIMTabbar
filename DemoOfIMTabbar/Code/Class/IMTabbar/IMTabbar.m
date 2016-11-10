@@ -424,7 +424,6 @@ static CGFloat   const InputViewMaxHeight = 150.0;
         {
             [_delegate didSelectAtCharacter];
         }
-        return NO;
     }
     else if ([text length]==0)
     {

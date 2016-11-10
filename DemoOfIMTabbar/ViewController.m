@@ -14,6 +14,9 @@
 {
     UITableView *infoTable;
     IMTabbar    *myTabber;
+    
+    //标记@who的数组，在文本编辑中动态增减
+    NSMutableArray *atWhoArr;
 }
 
 @end
@@ -24,6 +27,7 @@
     self = [super init];
     if (self) {
         self.title = @"IM交互";
+        atWhoArr   = [NSMutableArray array];
     }
     return self;
 }
@@ -124,11 +128,31 @@
 
 - (void)didSendText:(NSString *)text {
     NSLog(@"发送的文本消息 %@",text);
+    
+    NSMutableString *atWhoID = [NSMutableString string];
+    
+    //遍历文本输入框的富文本组成,获取最终@的对象
+    [myTabber.inputTextView.attributedText enumerateAttributesInRange:myTabber.inputTextView.attributedText.rangeOfAll options:NSAttributedStringEnumerationReverse usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+        YYTextBinding *textBinding = [attrs objectForKey:YYTextBindingAttributeName];
+        if (textBinding)
+        {
+            //当前某个部分的富文本所含的字符
+            NSString *tempText = [myTabber.inputTextView.attributedText attributedSubstringFromRange:range].string;
+            if ([atWhoArr containsObject:tempText])
+            {
+                [atWhoID appendString:tempText];
+                [atWhoID appendString:@","];
+            }
+        }
+    }];
+    NSLog(@"当前@了 %@",atWhoID);
+    //消息发送结束,清空数组
+    [atWhoArr removeAllObjects];
 }
 
 - (BOOL)didDeleteCharacterFromLocation:(NSUInteger)location {
     NSLog(@"当前删除字符的位置 %lu",location);
-    //后面会完善好 等待
+    //这里最怕删除的是@who中的字符,这样在发送消息的时候需要确定哪些不被@
     return NO;
 }
 
@@ -158,8 +182,16 @@
 #pragma mark - GroupMemberControlleDelegate
 
 - (void)selectedUserWithUserName:(NSString *)userName {
-    NSString *string = [NSString stringWithFormat:@"@%@",userName];
-    [myTabber.inputTextView insertText:string];
+    if (userName.length == 0)
+    {
+        return;
+    }
+    NSString *atWhoString = [userName stringByAppendingString:@" "];
+    [myTabber.inputTextView insertText:atWhoString];
+    
+    //添加到容器 eg:@["@who "]
+    NSString *storeString = [NSString stringWithFormat:@"@%@",userName];
+    [atWhoArr addObject:storeString];
 }
 
 #pragma mark - 自定义方法

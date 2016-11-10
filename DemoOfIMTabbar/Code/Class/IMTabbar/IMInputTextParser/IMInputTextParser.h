@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- 文本解析类(YYTextView需要用到,其关键在匹配到自定义key-vaule的图片)
+ 文本解析类(YYTextView需要用到,其关键在 1)匹配到自定义key-vaule的图片  2.能够自行在群聊时匹配@who作为整体删除)
  */
 @interface IMInputTextParser : NSObject<YYTextParser>
 

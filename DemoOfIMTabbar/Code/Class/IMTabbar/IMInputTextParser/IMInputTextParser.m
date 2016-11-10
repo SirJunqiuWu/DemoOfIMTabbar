@@ -28,6 +28,7 @@ OSSpinLockUnlock(&_lock);
     OSSpinLock _lock;
     NSMutableArray *_imageBindingArray;
 }
+
 - (instancetype)init
 {
     self = [super init];

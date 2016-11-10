@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoOfIMTabbar/Code/Class/IMTabbar/IMTabbar.m"
-            timestampString = "500364329.413592"
+            timestampString = "500436696.589037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "566"
-            endingLineNumber = "566"
+            startingLineNumber = "565"
+            endingLineNumber = "565"
             landmarkName = "+emojiMapper"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoOfIMTabbar/Code/Class/IMTabbar/IMTabbar.m"
-            timestampString = "500364329.413592"
+            timestampString = "500436696.589037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "455"
-            endingLineNumber = "455"
+            startingLineNumber = "454"
+            endingLineNumber = "454"
             landmarkName = "-getTextViewContentH:"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,12 +122,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DemoOfIMTabbar/Code/Class/IMTabbar/IMInputTextParser/IMInputTextParser.m"
-            timestampString = "500350604.589631"
+            timestampString = "500436988.927107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-createImageBindingRegex"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DemoOfIMTabbar/Code/Class/IMTabbar/IMInputTextParser/IMInputTextParser.m"
+            timestampString = "500436988.927107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-parseText:selectedRange:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
